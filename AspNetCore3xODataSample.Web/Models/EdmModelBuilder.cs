@@ -18,6 +18,7 @@ namespace AspNetCore3xODataSample.Web.Models
                 builder.EntitySet<Customer>("Customers");
                 builder.EntitySet<Order>("Orders");
                 builder.EntitySet<Person>("People").EntityType.HasKey(x=>x.Name);
+                builder.EntitySet<Office>("Offices").EntityType.HasKey(x => x.Id);
                 _edmModel = builder.GetEdmModel();
             }
 

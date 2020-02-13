@@ -12,25 +12,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCore3xODataSample.Web.Controllers
 {
-    public class PeopleController : ODataController
+    public class OfficesController : ODataController
     {
         private readonly SampleDataConnection _context;
 
-        public PeopleController(SampleDataConnection context)
+        public OfficesController(SampleDataConnection context)
         {
             _context = context;
         }
 
         [EnableQuery]
-        public IQueryable<Person> Get()
+        public IQueryable<Office> Get()
         {
-            return _context.People;
+            return _context.Offices;
         }
 
         [EnableQuery]
-        public IActionResult Get(string key)
+        public IActionResult Get(int key)
         {
-            return Ok(_context.People.Where(x => x.Name == key));
+            return Ok(_context.Offices.Where(x => x.Id == key));
         }
     }
 }

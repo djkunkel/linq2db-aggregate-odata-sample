@@ -14,7 +14,8 @@ namespace AspNetCore3xODataSample.Web.LinqToDb
 
         }
 
-        public ITable<Person> Person => GetTable<Person>();
+        public ITable<Person> People => GetTable<Person>();
+        public ITable<Office> Offices => GetTable<Office>();
 
 
     }
