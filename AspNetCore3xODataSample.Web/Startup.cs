@@ -32,6 +32,7 @@ namespace AspNetCore3xODataSample.Web
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
             DataConnection.DefaultSettings = new MySettings();
+            DataConnection.TurnTraceSwitchOn();
             services.AddScoped<SampleDataConnection>();
         }
 

@@ -21,6 +21,9 @@ namespace AspNetCore3xODataSample.Web.Models
         [Column("OfficeId")]
         public int OfficeId { get; set; }
 
+        [Column("StartDate")]
+        public DateTimeOffset StartDate { get; set; }
+
         [Association(OtherKey = "Id", ThisKey ="OfficeId")]
         public Office Office { get; set; }
     }
