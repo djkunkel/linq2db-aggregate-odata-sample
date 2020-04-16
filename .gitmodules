@@ -1,4 +1,0 @@
-[submodule "linq2db"]
-	path = linq2db
-	url = https://github.com/linq2db/linq2db.git
-	branch = master
